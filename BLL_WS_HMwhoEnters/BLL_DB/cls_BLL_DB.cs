@@ -28,7 +28,7 @@ namespace BLL_WS_HMwhoEnters.BLL_DB
         {
             try
             {
-                Obj_DAL_DB.sCadena = ConfigurationManager.ConnectionStrings["CNX_SQL_CALLCENTER"].ToString().Trim();
+                Obj_DAL_DB.sCadena = ConfigurationManager.ConnectionStrings["CNX_SQL"].ToString().Trim();
                 Obj_DAL_DB.sql_CNX = new SqlConnection(Obj_DAL_DB.sCadena);
             }
             catch (Exception e)

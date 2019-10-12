@@ -40,7 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_CyM\cls_DAL_Actividades.cs" />
+    <Compile Include="DAL_CyM\cls_DAL_Horarios_Visita.cs" />
+    <Compile Include="DAL_CyM\cls_DAL_Residentes.cs" />
+    <Compile Include="DAL_CyM\cls_DAL_TipoVisitante.cs" />
     <Compile Include="DAL_CyM\cls_DAL_Visitante.cs" />
+    <Compile Include="DAL_CyM\cls_DAL_Visitas.cs" />
+    <Compile Include="DAL_CyM\csl_DAL_Usuarios.cs" />
     <Compile Include="DAL_DB\cls_DAL_DB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

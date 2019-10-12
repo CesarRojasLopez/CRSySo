@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace DAL_WS_HMwhoEnters.DAL_CyM
 {
-    public class cls_DAL_Visitante
+    public class cls_DAL_Residentes
     {
         private string _APELLIDOS;
-        private string _CED_ULT_VISITADO;
         private string _CEDULA;
-        private string _CORREO;
+        private string _CORREO_CONTACTO;
         private char _ESTADO;
         private DateTime _FECHA_CREACION;
+        private DateTime _FECHA_INGRESO;
+        private DateTime _FECHA_ULT_VISITA;
         private string _GENERO;
-        private int _ID_TIPO_VISITANTE;
         private string _NOMBRE;
-        private string _TEL_VISITANTE;
+        private string _NOMBRE_CONTACTO;
+        private string _TEL_CONTACTO;
         private int _USUARIO_CREACION;
 
         public string APELLIDOS
@@ -30,19 +31,6 @@ namespace DAL_WS_HMwhoEnters.DAL_CyM
             set
             {
                 _APELLIDOS = value;
-            }
-        }
-
-        public string CED_ULT_VISITADO
-        {
-            get
-            {
-                return _CED_ULT_VISITADO;
-            }
-
-            set
-            {
-                _CED_ULT_VISITADO = value;
             }
         }
 
@@ -59,16 +47,16 @@ namespace DAL_WS_HMwhoEnters.DAL_CyM
             }
         }
 
-        public string CORREO
+        public string CORREO_CONTACTO
         {
             get
             {
-                return _CORREO;
+                return _CORREO_CONTACTO;
             }
 
             set
             {
-                _CORREO = value;
+                _CORREO_CONTACTO = value;
             }
         }
 
@@ -98,6 +86,32 @@ namespace DAL_WS_HMwhoEnters.DAL_CyM
             }
         }
 
+        public DateTime FECHA_INGRESO
+        {
+            get
+            {
+                return _FECHA_INGRESO;
+            }
+
+            set
+            {
+                _FECHA_INGRESO = value;
+            }
+        }
+
+        public DateTime FECHA_ULT_VISITA
+        {
+            get
+            {
+                return _FECHA_ULT_VISITA;
+            }
+
+            set
+            {
+                _FECHA_ULT_VISITA = value;
+            }
+        }
+
         public string GENERO
         {
             get
@@ -108,19 +122,6 @@ namespace DAL_WS_HMwhoEnters.DAL_CyM
             set
             {
                 _GENERO = value;
-            }
-        }
-
-        public int ID_TIPO_VISITANTE
-        {
-            get
-            {
-                return _ID_TIPO_VISITANTE;
-            }
-
-            set
-            {
-                _ID_TIPO_VISITANTE = value;
             }
         }
 
@@ -137,16 +138,29 @@ namespace DAL_WS_HMwhoEnters.DAL_CyM
             }
         }
 
-        public string TEL_VISITANTE
+        public string NOMBRE_CONTACTO
         {
             get
             {
-                return _TEL_VISITANTE;
+                return _NOMBRE_CONTACTO;
             }
 
             set
             {
-                _TEL_VISITANTE = value;
+                _NOMBRE_CONTACTO = value;
+            }
+        }
+
+        public string TEL_CONTACTO
+        {
+            get
+            {
+                return _TEL_CONTACTO;
+            }
+
+            set
+            {
+                _TEL_CONTACTO = value;
             }
         }
 

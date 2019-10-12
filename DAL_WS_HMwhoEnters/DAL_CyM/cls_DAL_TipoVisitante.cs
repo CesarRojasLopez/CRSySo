@@ -6,69 +6,39 @@ using System.Threading.Tasks;
 
 namespace DAL_WS_HMwhoEnters.DAL_CyM
 {
-    public class cls_DAL_Visitante
+    public class cls_DAL_TipoVisitante
     {
-        private string _APELLIDOS;
-        private string _CED_ULT_VISITADO;
-        private string _CEDULA;
-        private string _CORREO;
+        private string _DESCRIPCION;
+        private string _DETALLE;
         private char _ESTADO;
         private DateTime _FECHA_CREACION;
-        private string _GENERO;
         private int _ID_TIPO_VISITANTE;
-        private string _NOMBRE;
-        private string _TEL_VISITANTE;
+        private string _NOMENCLATURA;
         private int _USUARIO_CREACION;
 
-        public string APELLIDOS
+        public string DESCRIPCION
         {
             get
             {
-                return _APELLIDOS;
+                return _DESCRIPCION;
             }
 
             set
             {
-                _APELLIDOS = value;
+                _DESCRIPCION = value;
             }
         }
 
-        public string CED_ULT_VISITADO
+        public string DETALLE
         {
             get
             {
-                return _CED_ULT_VISITADO;
+                return _DETALLE;
             }
 
             set
             {
-                _CED_ULT_VISITADO = value;
-            }
-        }
-
-        public string CEDULA
-        {
-            get
-            {
-                return _CEDULA;
-            }
-
-            set
-            {
-                _CEDULA = value;
-            }
-        }
-
-        public string CORREO
-        {
-            get
-            {
-                return _CORREO;
-            }
-
-            set
-            {
-                _CORREO = value;
+                _DETALLE = value;
             }
         }
 
@@ -98,19 +68,6 @@ namespace DAL_WS_HMwhoEnters.DAL_CyM
             }
         }
 
-        public string GENERO
-        {
-            get
-            {
-                return _GENERO;
-            }
-
-            set
-            {
-                _GENERO = value;
-            }
-        }
-
         public int ID_TIPO_VISITANTE
         {
             get
@@ -124,29 +81,16 @@ namespace DAL_WS_HMwhoEnters.DAL_CyM
             }
         }
 
-        public string NOMBRE
+        public string NOMENCLATURA
         {
             get
             {
-                return _NOMBRE;
+                return _NOMENCLATURA;
             }
 
             set
             {
-                _NOMBRE = value;
-            }
-        }
-
-        public string TEL_VISITANTE
-        {
-            get
-            {
-                return _TEL_VISITANTE;
-            }
-
-            set
-            {
-                _TEL_VISITANTE = value;
+                _NOMENCLATURA = value;
             }
         }
 

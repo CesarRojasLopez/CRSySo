@@ -41,12 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL_CyM\cls_BLL_Actividades.cs" />
+    <Compile Include="BLL_CyM\cls_BLL_HorariosVista.cs" />
+    <Compile Include="BLL_CyM\cls_BLL_Residentes.cs" />
+    <Compile Include="BLL_CyM\cls_BLL_TipoVisitante.cs" />
+    <Compile Include="BLL_CyM\cls_BLL_Usuarios.cs" />
+    <Compile Include="BLL_CyM\cls_BLL_Visitante.cs" />
+    <Compile Include="BLL_CyM\cls_BLL_Visitas.cs" />
     <Compile Include="BLL_DB\cls_BLL_DB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL_CyM\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DAL_WS_HMwhoEnters\DAL_WS_HMwhoEnters.csproj">
       <Project>{9034859d-47e8-4362-a7c5-bd11f068c2c6}</Project>

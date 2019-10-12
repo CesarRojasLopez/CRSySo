@@ -6,69 +6,40 @@ using System.Threading.Tasks;
 
 namespace DAL_WS_HMwhoEnters.DAL_CyM
 {
-    public class cls_DAL_Visitante
+    public class cls_DAL_Horarios_Visita
     {
-        private string _APELLIDOS;
-        private string _CED_ULT_VISITADO;
-        private string _CEDULA;
-        private string _CORREO;
+        private string _DESCRIPCION;
+        private string _DIA_SEMANA;
         private char _ESTADO;
         private DateTime _FECHA_CREACION;
-        private string _GENERO;
-        private int _ID_TIPO_VISITANTE;
-        private string _NOMBRE;
-        private string _TEL_VISITANTE;
+        private DateTime _H_FIN;
+        private DateTime _H_INICIO;
+        private int _ID_HORARIO;
         private int _USUARIO_CREACION;
 
-        public string APELLIDOS
+        public string DESCRIPCION
         {
             get
             {
-                return _APELLIDOS;
+                return _DESCRIPCION;
             }
 
             set
             {
-                _APELLIDOS = value;
+                _DESCRIPCION = value;
             }
         }
 
-        public string CED_ULT_VISITADO
+        public string DIA_SEMANA
         {
             get
             {
-                return _CED_ULT_VISITADO;
+                return _DIA_SEMANA;
             }
 
             set
             {
-                _CED_ULT_VISITADO = value;
-            }
-        }
-
-        public string CEDULA
-        {
-            get
-            {
-                return _CEDULA;
-            }
-
-            set
-            {
-                _CEDULA = value;
-            }
-        }
-
-        public string CORREO
-        {
-            get
-            {
-                return _CORREO;
-            }
-
-            set
-            {
-                _CORREO = value;
+                _DIA_SEMANA = value;
             }
         }
 
@@ -98,55 +69,42 @@ namespace DAL_WS_HMwhoEnters.DAL_CyM
             }
         }
 
-        public string GENERO
+        public DateTime H_FIN
         {
             get
             {
-                return _GENERO;
+                return _H_FIN;
             }
 
             set
             {
-                _GENERO = value;
+                _H_FIN = value;
             }
         }
 
-        public int ID_TIPO_VISITANTE
+        public DateTime H_INICIO
         {
             get
             {
-                return _ID_TIPO_VISITANTE;
+                return _H_INICIO;
             }
 
             set
             {
-                _ID_TIPO_VISITANTE = value;
+                _H_INICIO = value;
             }
         }
 
-        public string NOMBRE
+        public int ID_HORARIO
         {
             get
             {
-                return _NOMBRE;
+                return _ID_HORARIO;
             }
 
             set
             {
-                _NOMBRE = value;
-            }
-        }
-
-        public string TEL_VISITANTE
-        {
-            get
-            {
-                return _TEL_VISITANTE;
-            }
-
-            set
-            {
-                _TEL_VISITANTE = value;
+                _ID_HORARIO = value;
             }
         }
 
