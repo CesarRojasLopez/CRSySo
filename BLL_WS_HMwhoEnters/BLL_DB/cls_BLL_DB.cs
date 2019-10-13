@@ -61,19 +61,22 @@ namespace BLL_WS_HMwhoEnters.BLL_DB
                                 switch (dr[@"Tip_Dato"].ToString())
                                 {
                                     case "1":
-                                        SqlDataType = SqlDbType.VarChar;
+                                        SqlDataType = SqlDbType.Char;
                                         break;
                                     case "2":
-                                        SqlDataType = SqlDbType.Char;
+                                        SqlDataType = SqlDbType.VarChar;
                                         break;
                                     case "3":
                                         SqlDataType = SqlDbType.Int;
                                         break;
                                     case "4":
-                                        SqlDataType = SqlDbType.Date;
+                                        SqlDataType = SqlDbType.Decimal;                                        
                                         break;
                                     case "5":
-                                        SqlDataType = SqlDbType.Decimal;
+                                        SqlDataType = SqlDbType.Date;
+                                        break;
+                                    case "6":
+                                        SqlDataType = SqlDbType.DateTime;
                                         break;
                                     default:
                                         break;
@@ -127,19 +130,22 @@ namespace BLL_WS_HMwhoEnters.BLL_DB
                                 switch (dr[@"Tip_Dato"].ToString())
                                 {
                                     case "1":
-                                        SqlDataType = SqlDbType.VarChar;
+                                        SqlDataType = SqlDbType.Char;
                                         break;
                                     case "2":
-                                        SqlDataType = SqlDbType.Char;
+                                        SqlDataType = SqlDbType.VarChar;
                                         break;
                                     case "3":
                                         SqlDataType = SqlDbType.Int;
                                         break;
                                     case "4":
-                                        SqlDataType = SqlDbType.DateTime;
+                                        SqlDataType = SqlDbType.Decimal;
                                         break;
                                     case "5":
-                                        SqlDataType = SqlDbType.Decimal;
+                                        SqlDataType = SqlDbType.Date;
+                                        break;
+                                    case "6":
+                                        SqlDataType = SqlDbType.DateTime;
                                         break;
                                     default:
                                         break;
@@ -193,19 +199,22 @@ namespace BLL_WS_HMwhoEnters.BLL_DB
                                 switch (dr[@"Tip_Dato"].ToString())
                                 {
                                     case "1":
-                                        SqlDataType = SqlDbType.VarChar;
+                                        SqlDataType = SqlDbType.Char;
                                         break;
                                     case "2":
-                                        SqlDataType = SqlDbType.Char;
+                                        SqlDataType = SqlDbType.VarChar;
                                         break;
                                     case "3":
                                         SqlDataType = SqlDbType.Int;
                                         break;
                                     case "4":
-                                        SqlDataType = SqlDbType.DateTime;
+                                        SqlDataType = SqlDbType.Decimal;
                                         break;
                                     case "5":
-                                        SqlDataType = SqlDbType.Decimal;
+                                        SqlDataType = SqlDbType.Date;
+                                        break;
+                                    case "6":
+                                        SqlDataType = SqlDbType.DateTime;
                                         break;
                                     default:
                                         break;

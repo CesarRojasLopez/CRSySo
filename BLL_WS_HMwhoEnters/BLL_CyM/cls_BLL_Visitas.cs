@@ -17,9 +17,9 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB  ObjDalDB = new cls_DAL_DB();
-            ObjDalDB.sNombreTabla = "Lista de Activos";
+            ObjDalDB.sNombreTabla = "Lista visitas";
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
-            ObjDalDB.sSentencia = ConfigurationManager.AppSettings["SP_Listar_Activos"];
+            ObjDalDB.sSentencia = ConfigurationManager.AppSettings["LISTAR_VISITAS"];
             ObjBllCNX.Ejec_DataAdap(ref ObjDalDB);
 
             if (ObjDalDB.sMsgError != string.Empty)
@@ -40,8 +40,8 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
             ObjDalDB.sNombreTabla = "Lista de Activos";
-            ObjDalDB.sSentencia = ConfigurationManager.AppSettings["SP_Filtrar_Activos"];
-            ObjDalDB.dt_Parametros.Rows.Add("@Desc_Activo", 1, sFiltro);
+            ObjDalDB.sSentencia = ConfigurationManager.AppSettings[""];
+            ObjDalDB.dt_Parametros.Rows.Add("@ID_VISITA", 3, sFiltro);
             ObjBllCNX.Ejec_DataAdap(ref ObjDalDB);
 
             if (ObjDalDB.sMsgError != string.Empty)
@@ -63,18 +63,18 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
 
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
 
-            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_RESIDENTE", 3, Obj_DAL_Visitas.CEDULA_RESIDENTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_VISITANTE", 1,  Obj_DAL_Visitas.CEDULA_VISITANTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_INGRESO", 3, Obj_DAL_Visitas.FECHA_HORA_INGRESO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_SALIDA", 3, Obj_DAL_Visitas.FECHA_HORA_SALIDA.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_ACTIVIDAD", 5, Obj_DAL_Visitas.ID_ACTIVIDAD.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_HORARIO_VISITADO", 2, Obj_DAL_Visitas.ID_HORARIO_VISITADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_VISITA", 4, Obj_DAL_Visitas.ID_VISITA.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@TIPO_VISITANTE", 1, Obj_DAL_Visitas.TIPO_VISITANTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 4, Obj_DAL_Visitas.USUARIO_CREACION.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_RESIDENTE", 2, Obj_DAL_Visitas.CEDULA_RESIDENTE.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_VISITANTE", 2,  Obj_DAL_Visitas.CEDULA_VISITANTE.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_INGRESO", 6, Obj_DAL_Visitas.FECHA_HORA_INGRESO.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_SALIDA", 6, Obj_DAL_Visitas.FECHA_HORA_SALIDA.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@ID_ACTIVIDAD", 3, Obj_DAL_Visitas.ID_ACTIVIDAD.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@ID_HORARIO_VISITADO", 3, Obj_DAL_Visitas.ID_HORARIO_VISITADO.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@ID_VISITA", 3, Obj_DAL_Visitas.ID_VISITA.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@TIPO_VISITANTE", 3, Obj_DAL_Visitas.TIPO_VISITANTE.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 2, Obj_DAL_Visitas.USUARIO_CREACION.ToString().Trim());
 
 
-        ObjDalDB.sSentencia = ConfigurationManager.AppSettings["Insertar_Activos"];
+        ObjDalDB.sSentencia = ConfigurationManager.AppSettings["INSERTAR_VISITAS"];
 
             ObjBllCNX.Ejec_Scalar(ref ObjDalDB);
 
@@ -95,18 +95,18 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
 
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
 
-            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_RESIDENTE", 3, Obj_DAL_Visitas.CEDULA_RESIDENTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_VISITANTE", 1, Obj_DAL_Visitas.CEDULA_VISITANTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_INGRESO", 3, Obj_DAL_Visitas.FECHA_HORA_INGRESO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_SALIDA", 3, Obj_DAL_Visitas.FECHA_HORA_SALIDA.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_ACTIVIDAD", 5, Obj_DAL_Visitas.ID_ACTIVIDAD.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_HORARIO_VISITADO", 2, Obj_DAL_Visitas.ID_HORARIO_VISITADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_VISITA", 4, Obj_DAL_Visitas.ID_VISITA.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@TIPO_VISITANTE", 1, Obj_DAL_Visitas.TIPO_VISITANTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 4, Obj_DAL_Visitas.USUARIO_CREACION.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_RESIDENTE", 2, Obj_DAL_Visitas.CEDULA_RESIDENTE.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_VISITANTE", 2, Obj_DAL_Visitas.CEDULA_VISITANTE.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_INGRESO", 6, Obj_DAL_Visitas.FECHA_HORA_INGRESO.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_SALIDA", 6, Obj_DAL_Visitas.FECHA_HORA_SALIDA.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@ID_ACTIVIDAD", 3, Obj_DAL_Visitas.ID_ACTIVIDAD.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@ID_HORARIO_VISITADO", 3, Obj_DAL_Visitas.ID_HORARIO_VISITADO.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@ID_VISITA", 3, Obj_DAL_Visitas.ID_VISITA.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@TIPO_VISITANTE", 3, Obj_DAL_Visitas.TIPO_VISITANTE.ToString().Trim());
+            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 2, Obj_DAL_Visitas.USUARIO_CREACION.ToString().Trim());
 
 
-            ObjDalDB.sSentencia = ConfigurationManager.AppSettings["Modificar_Activos"];
+            ObjDalDB.sSentencia = ConfigurationManager.AppSettings["MODIFICAR_VISITAS"];
 
             ObjBllCNX.Ejec_NonQuery(ref ObjDalDB);
 
@@ -126,7 +126,7 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
 
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
-            ObjDalDB.sSentencia = ConfigurationManager.AppSettings["SP_Eliminar_Activos"];
+            ObjDalDB.sSentencia = ConfigurationManager.AppSettings["ELIMINAR_VISITAS"];
             ObjDalDB.dt_Parametros.Rows.Add("@Placa_Activo", 3, sFiltro);
 
             ObjBllCNX.Ejec_NonQuery(ref ObjDalDB);
