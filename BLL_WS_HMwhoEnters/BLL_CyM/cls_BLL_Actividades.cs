@@ -19,7 +19,7 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
             ObjDalDB.sNombreTabla = "Lista de actividades";
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
-            ObjDalDB.sSentencia = ConfigurationManager.AppSettings["LISTAR_ACTIVIDADES"];
+            ObjDalDB.sSentencia = ConfigurationManager.AppSettings["LISTAR_ACTIVIDADES"];//este es el set command, en epañol aqui le setiamos el comando a ejecutar
             ObjBllCNX.Ejec_DataAdap(ref ObjDalDB);
 
             if (ObjDalDB.sMsgError != string.Empty)
