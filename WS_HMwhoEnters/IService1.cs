@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -20,6 +21,18 @@ namespace WS_HMwhoEnters
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
+        [OperationContract]
+        DataSet Listar(string que_voy_a_listar);
+
+        [OperationContract]
+        string Insertar(string que_voy_a_insertar, DataSet dtNombreValor);
+
+        [OperationContract]
+        string Modificar(string que_voy_a_modificar, DataSet dtNombreValor);
+
+        [OperationContract]
+        string Eliminar(string que_voy_a_eliminar, string id_eliminar);
+
     }
 
 

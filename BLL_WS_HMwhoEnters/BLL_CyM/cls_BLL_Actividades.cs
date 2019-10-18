@@ -64,8 +64,6 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
             
             ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Actividades.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 6, Obj_DAL_Actividades.FECHA_CREACION.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_ACTIVIDAD", 3, Obj_DAL_Actividades.ID_ACTIVIDAD.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@NOMBRE_ACTIVIDAD", 3, Obj_DAL_Actividades.NOMBRE_ACTIVIDAD.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 3, Obj_DAL_Actividades.USUARIO_CREACION.ToString().Trim());            
             
@@ -91,10 +89,8 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
 
             ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Actividades.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 6, Obj_DAL_Actividades.FECHA_CREACION.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ID_ACTIVIDAD", 3, Obj_DAL_Actividades.ID_ACTIVIDAD.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@NOMBRE_ACTIVIDAD", 3, Obj_DAL_Actividades.NOMBRE_ACTIVIDAD.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 3, Obj_DAL_Actividades.USUARIO_CREACION.ToString().Trim());
 
             ObjDalDB.sSentencia = ConfigurationManager.AppSettings["MODIFICAR_ACTIVIDADES"];
 

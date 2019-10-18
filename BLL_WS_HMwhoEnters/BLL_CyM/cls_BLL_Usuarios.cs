@@ -64,8 +64,6 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
 
             ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Usuarios.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 6, Obj_DAL_Usuarios.FECHA_CREACION.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_USUARIO", 3, Obj_DAL_Usuarios.ID_USUARIO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@PASWORD", 2, Obj_DAL_Usuarios.ID_USUARIO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ROL", 2, Obj_DAL_Usuarios.ROL.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@USUARIO", 2, Obj_DAL_Usuarios.USUARIO.ToString().Trim());
@@ -93,12 +91,10 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
 
             ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Usuarios.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 6, Obj_DAL_Usuarios.FECHA_CREACION.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ID_USUARIO", 3, Obj_DAL_Usuarios.ID_USUARIO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@PASWORD", 2, Obj_DAL_Usuarios.ID_USUARIO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ROL", 2, Obj_DAL_Usuarios.ROL.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@USUARIO", 2, Obj_DAL_Usuarios.USUARIO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 1, Obj_DAL_Usuarios.USUARIO_CREACION.ToString().Trim());
 
             ObjDalDB.sSentencia = ConfigurationManager.AppSettings["MODIFICAR_USUARIOS"];
 

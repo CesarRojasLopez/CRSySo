@@ -13,7 +13,7 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
 {
     public class cls_BLL_Residentes
     {
-        public DataTable ListarHorarios(ref string sMsjError)
+        public DataTable ListarResidentes(ref string sMsjError)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
@@ -34,7 +34,7 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             }
         }
 
-        public DataTable FiltrarActividades(ref string sMsjError, string sFiltro)
+        public DataTable FiltrarResidentes(ref string sMsjError, string sFiltro)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
@@ -56,25 +56,24 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             }
         }
 
-        public void InsertarActividades(ref string sMsjError, ref cls_DAL_Residentes Obj_DAL_Residentes)
+        public void InsertarResidentes(ref string sMsjError, ref cls_DAL_Residentes Obj_DAL_Residentes)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
 
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
 
-            ObjDalDB.dt_Parametros.Rows.Add("@APELLIDOS", 2, Obj_DAL_Residentes.APELLIDOS.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA", 2, Obj_DAL_Residentes.CEDULA.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@CORREO_CONTACTO", 2, Obj_DAL_Residentes.CORREO_CONTACTO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Residentes.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 6, Obj_DAL_Residentes.FECHA_CREACION.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_INGRESO", 6, Obj_DAL_Residentes.FECHA_INGRESO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_ULT_VISITA", 6, Obj_DAL_Residentes.FECHA_ULT_VISITA.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@GENERO", 2, Obj_DAL_Residentes.GENERO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@NOMBRE", 2, Obj_DAL_Residentes.NOMBRE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@NOMBRE_CONTACTO", 2, Obj_DAL_Residentes.NOMBRE_CONTACTO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@TEL_CONTACTO", 2, Obj_DAL_Residentes.TEL_CONTACTO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 3, Obj_DAL_Residentes.USUARIO_CREACION.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@APELLIDOS", 2, Obj_DAL_Residentes.APELLIDOS.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@CEDULA", 2, Obj_DAL_Residentes.CEDULA.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@CORREO_CONTACTO", 2, Obj_DAL_Residentes.CORREO_CONTACTO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Residentes.ESTADO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@FECHA_INGRESO", 6, Obj_DAL_Residentes.FECHA_INGRESO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@FECHA_ULT_VISITA", 6, Obj_DAL_Residentes.FECHA_ULT_VISITA.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@GENERO", 2, Obj_DAL_Residentes.GENERO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@NOMBRE", 2, Obj_DAL_Residentes.NOMBRE.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@NOMBRE_CONTACTO", 2, Obj_DAL_Residentes.NOMBRE_CONTACTO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@TEL_CONTACTO", 2, Obj_DAL_Residentes.TEL_CONTACTO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 3, Obj_DAL_Residentes.USUARIO_CREACION.ToString().Trim());
 
             ObjDalDB.sSentencia = ConfigurationManager.AppSettings["INSERTAR_RESIDENTES"];
 
@@ -90,7 +89,7 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             }
         }
 
-        public void ModificarActividades(ref string sMsjError, ref cls_DAL_Residentes Obj_DAL_Residentes)
+        public void ModificarResidentes(ref string sMsjError, ref cls_DAL_Residentes Obj_DAL_Residentes)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
@@ -101,14 +100,12 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             ObjDalDB.dt_Parametros.Rows.Add("@CEDULA", 2, Obj_DAL_Residentes.CEDULA.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@CORREO_CONTACTO", 2, Obj_DAL_Residentes.CORREO_CONTACTO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Residentes.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 6, Obj_DAL_Residentes.FECHA_CREACION.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@FECHA_INGRESO", 6, Obj_DAL_Residentes.FECHA_INGRESO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@FECHA_ULT_VISITA", 6, Obj_DAL_Residentes.FECHA_ULT_VISITA.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@GENERO", 2, Obj_DAL_Residentes.GENERO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@NOMBRE", 2, Obj_DAL_Residentes.NOMBRE.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@NOMBRE_CONTACTO", 2, Obj_DAL_Residentes.NOMBRE_CONTACTO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@TEL_CONTACTO", 2, Obj_DAL_Residentes.TEL_CONTACTO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 3, Obj_DAL_Residentes.USUARIO_CREACION.ToString().Trim());
 
             ObjDalDB.sSentencia = ConfigurationManager.AppSettings["MODIFICAR_RESIDENTES"];
 
@@ -124,7 +121,7 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             }
         }
 
-        public void EliminarActividades(ref string sMsjError, string sFiltro)
+        public void EliminarResidentes(ref string sMsjError, string sFiltro)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();

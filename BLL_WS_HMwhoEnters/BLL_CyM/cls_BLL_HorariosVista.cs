@@ -34,7 +34,7 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             }
         }
 
-        public DataTable FiltrarActividades(ref string sMsjError, string sFiltro)
+        public DataTable FiltrarHorarios(ref string sMsjError, string sFiltro)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
@@ -56,7 +56,7 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             }
         }
 
-        public void InsertarActividades(ref string sMsjError, ref cls_DAL_Horarios_Visita Obj_DAL_Horarios)
+        public void InsertarHorarios(ref string sMsjError, ref cls_DAL_Horarios_Visita Obj_DAL_Horarios)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
@@ -66,10 +66,8 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             ObjDalDB.dt_Parametros.Rows.Add("@DESCRIPCION", 1, Obj_DAL_Horarios.DESCRIPCION.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@DIA_SEMANA", 6, Obj_DAL_Horarios.DIA_SEMANA.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Horarios.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 3, Obj_DAL_Horarios.FECHA_CREACION.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@H_FIN", 3, Obj_DAL_Horarios.H_FIN.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@H_INICIO", 3, Obj_DAL_Horarios.H_INICIO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_HORARIO", 3, Obj_DAL_Horarios.ID_HORARIO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 3, Obj_DAL_Horarios.USUARIO_CREACION.ToString().Trim());
 
             ObjDalDB.sSentencia = ConfigurationManager.AppSettings["INSERTAR_HORARIOS"];
@@ -86,21 +84,19 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             }
         }
 
-        public void ModificarActividades(ref string sMsjError, ref cls_DAL_Horarios_Visita Obj_DAL_Horarios)
+        public void ModificaHorarios(ref string sMsjError, ref cls_DAL_Horarios_Visita Obj_DAL_Horarios)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
 
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
 
-            ObjDalDB.dt_Parametros.Rows.Add("@DESCRIPCION", 1, Obj_DAL_Horarios.DESCRIPCION.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@DIA_SEMANA", 6, Obj_DAL_Horarios.DIA_SEMANA.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Horarios.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 3, Obj_DAL_Horarios.FECHA_CREACION.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@H_FIN", 3, Obj_DAL_Horarios.H_FIN.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@H_INICIO", 3, Obj_DAL_Horarios.H_INICIO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_HORARIO", 3, Obj_DAL_Horarios.ID_HORARIO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 3, Obj_DAL_Horarios.USUARIO_CREACION.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@DESCRIPCION", 1, Obj_DAL_Horarios.DESCRIPCION.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@DIA_SEMANA", 6, Obj_DAL_Horarios.DIA_SEMANA.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Horarios.ESTADO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@H_FIN", 3, Obj_DAL_Horarios.H_FIN.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@H_INICIO", 3, Obj_DAL_Horarios.H_INICIO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@ID_HORARIO", 3, Obj_DAL_Horarios.ID_HORARIO.ToString().Trim());
 
             ObjDalDB.sSentencia = ConfigurationManager.AppSettings["MODIFICAR_HORARIOS"];
 
@@ -116,7 +112,7 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             }
         }
 
-        public void EliminarActividades(ref string sMsjError, string sFiltro)
+        public void EliminarHorarios(ref string sMsjError, string sFiltro)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();

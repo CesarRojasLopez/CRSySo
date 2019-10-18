@@ -63,15 +63,12 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
 
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
 
-            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_RESIDENTE", 2, Obj_DAL_Visitas.CEDULA_RESIDENTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_VISITANTE", 2,  Obj_DAL_Visitas.CEDULA_VISITANTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_INGRESO", 6, Obj_DAL_Visitas.FECHA_HORA_INGRESO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_SALIDA", 6, Obj_DAL_Visitas.FECHA_HORA_SALIDA.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_ACTIVIDAD", 3, Obj_DAL_Visitas.ID_ACTIVIDAD.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_HORARIO_VISITADO", 3, Obj_DAL_Visitas.ID_HORARIO_VISITADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_VISITA", 3, Obj_DAL_Visitas.ID_VISITA.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@TIPO_VISITANTE", 3, Obj_DAL_Visitas.TIPO_VISITANTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 2, Obj_DAL_Visitas.USUARIO_CREACION.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_RESIDENTE", 2, Obj_DAL_Visitas.CEDULA_RESIDENTE.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_VISITANTE", 2,  Obj_DAL_Visitas.CEDULA_VISITANTE.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@ID_ACTIVIDAD", 3, Obj_DAL_Visitas.ID_ACTIVIDAD.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@ID_HORARIO_VISITADO", 3, Obj_DAL_Visitas.ID_HORARIO_VISITADO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@TIPO_VISITANTE", 3, Obj_DAL_Visitas.TIPO_VISITANTE.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 2, Obj_DAL_Visitas.USUARIO_CREACION.ToString().Trim());
 
 
         ObjDalDB.sSentencia = ConfigurationManager.AppSettings["INSERTAR_VISITAS"];
@@ -97,8 +94,6 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
 
             ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_RESIDENTE", 2, Obj_DAL_Visitas.CEDULA_RESIDENTE.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@CEDULA_VISITANTE", 2, Obj_DAL_Visitas.CEDULA_VISITANTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_INGRESO", 6, Obj_DAL_Visitas.FECHA_HORA_INGRESO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_HORA_SALIDA", 6, Obj_DAL_Visitas.FECHA_HORA_SALIDA.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ID_ACTIVIDAD", 3, Obj_DAL_Visitas.ID_ACTIVIDAD.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ID_HORARIO_VISITADO", 3, Obj_DAL_Visitas.ID_HORARIO_VISITADO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ID_VISITA", 3, Obj_DAL_Visitas.ID_VISITA.ToString().Trim());

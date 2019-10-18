@@ -66,8 +66,6 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             ObjDalDB.dt_Parametros.Rows.Add("@DESCRIPCION", 2, Obj_DAL_TipoVisitante.DESCRIPCION.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@DETALLE", 2, Obj_DAL_TipoVisitante.DETALLE.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_TipoVisitante.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 6, Obj_DAL_TipoVisitante.FECHA_CREACION.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_TIPO_VISITANTE", 3 ,Obj_DAL_TipoVisitante.ID_TIPO_VISITANTE.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@NOMENCLATURA", 2, Obj_DAL_TipoVisitante.NOMENCLATURA.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 1, Obj_DAL_TipoVisitante.USUARIO_CREACION.ToString().Trim());
 
@@ -95,10 +93,8 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             ObjDalDB.dt_Parametros.Rows.Add("@DESCRIPCION", 2, Obj_DAL_TipoVisitante.DESCRIPCION.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@DETALLE", 2, Obj_DAL_TipoVisitante.DETALLE.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_TipoVisitante.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 6, Obj_DAL_TipoVisitante.FECHA_CREACION.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ID_TIPO_VISITANTE", 3, Obj_DAL_TipoVisitante.ID_TIPO_VISITANTE.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@NOMENCLATURA", 2, Obj_DAL_TipoVisitante.NOMENCLATURA.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 1, Obj_DAL_TipoVisitante.USUARIO_CREACION.ToString().Trim());
 
             ObjDalDB.sSentencia = ConfigurationManager.AppSettings["MODIFICAR_TIPO_VISITANTE"];
 

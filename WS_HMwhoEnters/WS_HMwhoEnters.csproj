@@ -121,6 +121,10 @@
       <Project>{c20e2fcb-23d9-4838-89e0-627923f78b5a}</Project>
       <Name>BLL_WS_HMwhoEnters</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL_WS_HMwhoEnters\DAL_WS_HMwhoEnters.csproj">
+      <Project>{9034859D-47E8-4362-A7C5-BD11F068C2C6}</Project>
+      <Name>DAL_WS_HMwhoEnters</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

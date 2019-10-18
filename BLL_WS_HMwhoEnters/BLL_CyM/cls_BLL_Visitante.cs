@@ -56,24 +56,23 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             }
         }
 
-        public void InsertarUsuarios(ref string sMsjError, ref cls_DAL_Visitante Obj_DAL_Visitante)
+        public void InsertarVisitante(ref string sMsjError, ref cls_DAL_Visitante Obj_DAL_Visitante)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
 
             ObjBllCNX.CrearDTParametros(ref ObjDalDB);
 
-            ObjDalDB.dt_Parametros.Rows.Add("@APELLIDOS", 2, Obj_DAL_Visitante.APELLIDOS.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@CED_ULT_VISITADO", 2, Obj_DAL_Visitante.CED_ULT_VISITADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@CEDULA", 2, Obj_DAL_Visitante.CEDULA.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@CORREO", 2, Obj_DAL_Visitante.CORREO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Visitante.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 6, Obj_DAL_Visitante.FECHA_CREACION.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@GENERO", 2, Obj_DAL_Visitante.GENERO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@ID_TIPO_VISITANTE", 3, Obj_DAL_Visitante.ID_TIPO_VISITANTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@NOMBRE", 2, Obj_DAL_Visitante.NOMBRE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@TEL_VISITANTE", 2, Obj_DAL_Visitante.TEL_VISITANTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 3, Obj_DAL_Visitante.USUARIO_CREACION.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@APELLIDOS", 2, Obj_DAL_Visitante.APELLIDOS.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@CED_ULT_VISITADO", 2, Obj_DAL_Visitante.CED_ULT_VISITADO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@CEDULA", 2, Obj_DAL_Visitante.CEDULA.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@CORREO", 2, Obj_DAL_Visitante.CORREO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Visitante.ESTADO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@GENERO", 2, Obj_DAL_Visitante.GENERO.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@NOMBRE", 2, Obj_DAL_Visitante.NOMBRE.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@TEL_VISITANTE", 2, Obj_DAL_Visitante.TEL_VISITANTE.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 3, Obj_DAL_Visitante.USUARIO_CREACION.ToString().Trim());
+                ObjDalDB.dt_Parametros.Rows.Add("@ID_TIPO_VISITANTE", 3, Obj_DAL_Visitante.USUARIO_CREACION.ToString().Trim());
 
 
             ObjDalDB.sSentencia = ConfigurationManager.AppSettings["INSERTAR_VISITANTES"];
@@ -90,7 +89,7 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             }
         }
 
-        public void ModificarUsuarios(ref string sMsjError, ref cls_DAL_Visitante Obj_DAL_Visitante)
+        public void ModificarVisitante(ref string sMsjError, ref cls_DAL_Visitante Obj_DAL_Visitante)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
@@ -102,12 +101,10 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             ObjDalDB.dt_Parametros.Rows.Add("@CEDULA", 2, Obj_DAL_Visitante.CEDULA.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@CORREO", 2, Obj_DAL_Visitante.CORREO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ESTADO", 1, Obj_DAL_Visitante.ESTADO.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@FECHA_CREACION", 6, Obj_DAL_Visitante.FECHA_CREACION.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@GENERO", 2, Obj_DAL_Visitante.GENERO.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@ID_TIPO_VISITANTE", 3, Obj_DAL_Visitante.ID_TIPO_VISITANTE.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@NOMBRE", 2, Obj_DAL_Visitante.NOMBRE.ToString().Trim());
             ObjDalDB.dt_Parametros.Rows.Add("@TEL_VISITANTE", 2, Obj_DAL_Visitante.TEL_VISITANTE.ToString().Trim());
-            ObjDalDB.dt_Parametros.Rows.Add("@USUARIO_CREACION", 3, Obj_DAL_Visitante.USUARIO_CREACION.ToString().Trim());
 
             ObjDalDB.sSentencia = ConfigurationManager.AppSettings["MODIFICAR_VISITANTES"];
 
@@ -123,7 +120,7 @@ namespace BLL_WS_HMwhoEnters.BLL_CyM
             }
         }
 
-        public void EliminarUsuarios(ref string sMsjError, string sFiltro)
+        public void EliminarVisitante(ref string sMsjError, string sFiltro)
         {
             cls_BLL_DB ObjBllCNX = new cls_BLL_DB();
             cls_DAL_DB ObjDalDB = new cls_DAL_DB();
